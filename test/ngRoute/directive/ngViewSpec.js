@@ -501,7 +501,8 @@ describe('ngView', function() {
 
       $location.url('/foo');
       $rootScope.$digest();
-      expect(element.text()).toEqual('   \n   WORKS');
+      // using toMatch because in IE8+jquery the space doesn't get preserved. jquery bug?
+      expect(element.text()).toMatch(/\s*WORKS/);
 
       var div = element.find('div');
       expect(div.parent()[0].nodeName.toUpperCase()).toBeOneOf('NG:VIEW', 'VIEW');

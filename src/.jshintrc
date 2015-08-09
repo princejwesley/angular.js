@@ -163,6 +163,9 @@
     /* ng/compile.js */
     "directiveNormalize": false,
 
+    /* ng/parse.js */
+    "setter": false,
+
     /* ng/directive/directives.js */
     "ngDirective": false,
 
